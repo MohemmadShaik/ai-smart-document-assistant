@@ -3,10 +3,13 @@ package com.ai.documentassistant.service;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.stereotype.Service;
 
+import java.util.concurrent.Callable;
+
 @Service
 public class AIService {
 
     private final ChatClient chatClient;
+
 
     public AIService(ChatClient.Builder builder) {
         this.chatClient = builder.build();
@@ -15,9 +18,22 @@ public class AIService {
     public String askAI(String question) {
         return chatClient.prompt(question).call().content();
     }
+
+    public String summarize(String text) {
+        return chatClient
+                .prompt("Summarize this document:\n" + text)
+                .call()
+                .content();
+    }
 }
 
+/* 👉 Why not create a new AI client every time?
 
+You answer:
+
+We reuse a singleton ChatClient bean for efficiency and connection reuse instead of creating new instances per request.
+
+*/
 
 
 
