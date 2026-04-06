@@ -16,9 +16,9 @@ Postman
 Steps                  
 --------------------- 
 Phase 1: Environment setup (COMPLETED and pushed to Github A/c)   
-Phase 2: Project + AI Integration + First API  (COMPLETED but not pushed to Github A/c)
-Phase 3: PDF + Summarizer (Partially done)
-Phase 4: Testing + Final polish
+Phase 2: Project + AI Integration + First API  (COMPLETED but not pushed to Github A/c  
+Phase 3: PDF + Summarizer (Partially done)  
+Phase 4: Testing + Final polish  
 
 Phase 1: Environment Setup (20 minutes)
 
