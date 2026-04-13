@@ -2,6 +2,7 @@ package com.ai.documentassistant.controller;
 
 import com.ai.documentassistant.service.AIService;
 import com.ai.documentassistant.service.PdfService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -18,15 +19,19 @@ public class PdfController {
     }
 
     @PostMapping("/summarize")
-    public String summarizePdf(@RequestParam("file") MultipartFile file) {
+    public ResponseEntity<?> summarizePdf(@RequestParam("file") MultipartFile file) {
+        try {
+            String text = pdfService.extractText(file);
+            return ResponseEntity.ok(text);
 
-        // 1. Extract text
-        String text = pdfService.extractText(file);
+        } catch (RuntimeException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
 
         // 2. Validate + Process
-        text = pdfService.validateAndProcess(text);
+        //text = pdfService.validateAndProcess(text);
 
         // 3. AI Summarization
-        return aiService.summarize(text);
+       //return aiService.summarize(text);
     }
 }
