@@ -231,3 +231,42 @@ You now have:
 ✅ Input validation (production-level)
 ✅ Logging
 ✅ Clean architecture
+
+--------------------**---------------------------**---------------------
+
+## 🚨 Phase 4: Edge Case Handling (COMPLETED)
+
+### 🔍 Scenarios Handled:
+
+1. **Empty PDF**
+    - Response: "Uploaded PDF file is an Empty file"
+
+2. **Scanned PDF (Image-based)**
+    - Response: "Uploaded PDF file is a scanned PDF file"
+
+3. **Corrupted PDF**
+    - Response: "Uploaded file is a corrupted file"
+
+---
+
+### ⚙️ Enhancements:
+
+- Proper exception handling (avoiding 500 errors)
+- Differentiation between empty and scanned PDFs
+- Detection of image-based PDFs
+- Clean and user-friendly error messages
+- Improved validation logic
+
+---
+
+### 🧠 Key Learning:
+
+- Empty/Scanned PDFs are not exceptions but validation cases
+- Corrupted PDFs are handled via IOException
+- Designed system for real-world robustness
+
+---
+
+### 🎯 Outcome:
+
+A production-ready document processing pipeline with strong validation and fault tolerance.
