@@ -16,9 +16,9 @@ Postman
 Steps                  
 --------------------- 
 Phase 1: Environment setup (COMPLETED and pushed to Github A/c)   
-Phase 2: Project + AI Integration + First API  (COMPLETED but not pushed to Github A/c  
-Phase 3: PDF + Summarizer (Partially done)  
-Phase 4: Testing + Final polish  
+Phase 2: Project + AI Integration + First API  (COMPLETED and pushed into our Github Repo).
+Phase 3: PDF + Summarizer (COMPLETED and pushed into our Github Repo).)  
+Phase 4: Testing Edge cases + Final polish  (IN PROGRESS)
 
 Phase 1: Environment Setup (20 minutes)
 
@@ -234,17 +234,24 @@ You now have:
 
 --------------------**---------------------------**---------------------
 
-## 🚨 Phase 4: Edge Case Handling (COMPLETED)
+## 🚨 Phase 4: Edge Case Handling (IN PROGRESS)
+
+| Edge Case                       | Status    |
+| ------------------------------- |-----------|
+| Empty / Scanned / Corrupted PDF | ✅ DONE    |
+| Large PDF (50 pages)            | ❌ Pending |
+| Rate Limiting (API overuse)     | ❌ Pending |
+
 
 ### 🔍 Scenarios Handled:
 
-1. **Empty PDF**
+1. **Empty PDF handling**
     - Response: "Uploaded PDF file is an Empty file"
 
-2. **Scanned PDF (Image-based)**
+2. **Scanned PDF detection(Image-based)**
     - Response: "Uploaded PDF file is a scanned PDF file"
 
-3. **Corrupted PDF**
+3. **Corrupted PDF handling**
     - Response: "Uploaded file is a corrupted file"
 
 ---
@@ -270,3 +277,22 @@ You now have:
 ### 🎯 Outcome:
 
 A production-ready document processing pipeline with strong validation and fault tolerance.
+
+### ⏳ Pending:
+
+1. Large PDF handling (performance + token optimization)
+2. API Rate Limiting (prevent abuse / overload)
+
+---
+
+### 🎯 Goal:
+
+Build a production-ready resilient system capable of handling real-world edge cases efficiently.
+
+Q) “Is your project complete?”
+
+👉 You say:
+
+“Core functionality is complete, and Phase 4 edge case handling is in progress. I’ve already implemented validation for 
+empty, scanned, and corrupted PDFs, and
+I’m currently working on performance optimization for large files and rate limiting.”
